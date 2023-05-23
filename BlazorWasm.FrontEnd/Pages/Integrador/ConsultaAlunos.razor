@@ -1,0 +1,80 @@
+﻿@*//rota da pagina*@
+@page "/consultaAluno"
+@*//definicao layout padrao( no caso sem menu)*@
+@layout BlankLayout 
+@*//injetando repositorio para uso do banco de dados *@
+@inject IRepository<Aluno> repoAluno
+
+<div class="body">
+    <div id="login" class="container-fluid">
+        <div class="card" id="card">
+
+            <div class="card-header-content">
+                <img src="/img/logo.png" alt="Imagem de perfil" id="ImgPerfil">
+                <h1 id="h1Consulta">Consulta Alunos</h1>
+            </div>
+
+
+
+            <div id="botoesConsulta">
+                <input type="button" value="Cadastrar" id="btnAdicionar" class="btnConsulta"
+                       style="background-color: #405866; color: white;">
+                <br>
+                <input type="button" value="Editar" id="btnAlterar" class="btnConsulta"
+                       style="background-color: #707844; color: white;">
+                <br>
+                <input type="button" value="Remover" id="btnRemover" class="btnConsulta"
+                       style="background-color: #461515; color: white;">
+                <br>
+                <input type="button" value="Voltar" id="btnVoltar" class="btnConsulta"
+                       style="background-color: #461515; color: white;">
+
+            </div>
+
+            <div class="tableDiv">
+                <table class="table">
+                    <tr id="tableR">
+                        <th>RA</th>
+                        <th>Nome</th>
+                        <th>Série/Ano</th>
+                        <th>Contato</th>
+                        <th>Nascimento</th>
+                        <th>Turno</th>
+                    </tr>
+                    @if (ListaAlunos != null)
+                    {
+                        @foreach (var aluno in ListaAlunos)
+                        {
+                            <tr>
+                                <td>@aluno.RA</td>
+                                <td>@aluno.Nome</td>
+                                <td>@aluno.Serie_Ano</td>
+                                <td>@aluno.Contato</td>
+                                <td>@aluno.Nascimento</td>
+                                <td>Manha</td>
+                            </tr>
+                        }
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private List<Aluno> ListaAlunos = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ListaAlunos = await repoAluno.Get();
+    }
+
+    public void FiltraAluno(string nome)
+    {
+        ListaAlunos = ListaAlunos.Where(o => o.Nome.Contains(nome)).ToList();
+    }
+
+
+}

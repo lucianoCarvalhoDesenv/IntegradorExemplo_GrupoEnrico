@@ -1,0 +1,218 @@
+﻿
+
+.body {
+    background: linear-gradient(to bottom right, #9bbabd, #51777c, #c4d5c4); /* Background em gadiente*/
+    font-family: "Century Gothic", Arial, sans-serif; /* Letra */
+    font-size: 15px;
+    height: 100%;
+    /* background-repeat:no-repeat; */
+}
+
+  #card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #dfd8d4;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    min-width: 1000px;    
+    height: 75%;
+    min-height: 400px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+
+  .card-header-content{
+    position: absolute;
+    right: 1%;
+    height: 20%;
+    width: 38%;    
+  }
+
+#form1 {
+    width: 250px;
+    height: 41px;
+    border: 1px;
+    border-color: #405866;
+    left: 680px;
+}
+
+.btn-primary {
+    position: absolute;
+    left: 1000px;
+    top: 110px;
+    width: 200px;
+    height: 38px;
+}
+
+.input-group {
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    max-width: 200px; /* Ajuste o valor conforme necessário */
+}
+
+.input-group .form-control {
+    background-color: pink;
+    flex: 1;
+}
+
+.input-group .btn-primary {
+    width: 40px; /* Ajuste o valor conforme necessário */
+    height: 40px; /* Ajuste o valor conforme necessário */
+    padding: 0;
+}
+
+#h1Consulta{
+    font-family: "Century Gothic", Arial, sans-serif;
+    position: absolute;
+    top: 3%; /* Ajuste a distância em relação ao topo */
+    left: 20%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    color: #2a282a;
+    font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+.form-control{
+    position: absolute;
+    left: 600px;
+    top: 110px;
+    color:#2a282a;
+    width: 200px;
+
+}
+
+#botoesConsulta{      
+    
+    align-content: center;    
+    margin: 5px;
+    height: 58%;
+    position: absolute;
+    margin-left: 60%;
+    top: 40%;    
+    width: 37%;
+}
+
+.btnConsulta{
+    width: 150px;
+    margin: 10px;
+    height: 55px;
+    border: 0px;
+    border-radius: 10px;    
+}
+
+#btnVoltar{    
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+        
+    
+}
+
+#inputConsulta{
+    position: absolute;
+    top: 110px;
+    color:#2a282a;
+}
+.btn-primary{
+    position: absolute;
+    left:1100px;
+    top: 110px;
+    width: 30px;    
+}
+
+#ImgPerfil{
+    position: absolute;
+    right: 1px;
+    border-radius: 100px;
+    height: 80%;
+    width: 30%;    
+}
+
+.tableDiv{    
+
+    border-radius: 10px;
+    background-color: white;    
+    height: 100%;
+    width: 60%;
+    
+}
+
+
+
+#tableR{    
+    width: 100%;
+}
+
+#botaoImagem {
+    width: 60px;
+    height: 41px;
+    border: none;
+    background-image: url("img/lupinha.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right; 
+    background: 60%;
+    left: 900px;
+}
+
+.table{        
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px;
+    border-color: gray;
+}
+
+.submit{
+    background-color: #377d63;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;    
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+.add{    
+    height: 70px;
+    position: absolute;
+    bottom: 55%;
+    right: 25%;
+    background-color: #377d63;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    
+}
+
+.add:hover{
+background-color: #405866;
+}
+
+.consulta{
+    height: 70px;
+    position: absolute;
+    bottom: 20%;
+    right: 25%;
+    background-color: #377d63;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    color: white;
+}
+
+.consulta:hover{
+    background-color: #707844;
+}
